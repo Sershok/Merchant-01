@@ -27,4 +27,14 @@ public class app {
         quantity = 1000;
         price = 19.99;
     }
+
+    private static String processData() {
+        merchantA = new MerchantA(merchantName, phone, email);
+        infoMerchant = merchantA.infoMerchant();
+        product = new ProductA(productName, quantity, price);
+        infoProduct = product.infoProduct();
+        double sales = product.calcSales(quantity, price);
+        roundBonus = Rounder.roundValue(merchantA.calcBonus(sales));
+        return infoMerchant + infoProduct + "\nБонус (грн.): " + roundBonus;
+    }
 }
