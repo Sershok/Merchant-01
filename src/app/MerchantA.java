@@ -1,6 +1,6 @@
 package app;
 
-public class MerchantA extends Merchant {
+public class MerchantA extends Merchant implements Bonus{
 
     String email;
 
