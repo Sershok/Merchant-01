@@ -14,4 +14,6 @@ public class MerchantA extends Merchant {
         String phone = getPhone();
         return "Продавец: " + name + ", " + phone + ", " + email + "\n";
     }
+
+
 }
