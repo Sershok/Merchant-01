@@ -1,5 +1,7 @@
 package app;
 
+import java.util.Scanner;
+
 public class app {
 
     static String merchantName;
@@ -13,19 +15,30 @@ public class app {
     static MerchantA merchantA;
     static String infoMerchant;
     static String infoProduct;
+    static Scanner sc;
+
 
     public static void main(String[] args) {
-        initVars();
+        sc();
         showData(processData());
     }
 
-    private static void initVars() {
-        merchantName = "Роберт";
-        email = "bob@mail.com";
-        phone = "055 123-4567";
-        productName = "апельсины";
-        quantity = 1000;
-        price = 19.99;
+    
+
+   private static void sc(){
+        sc = new Scanner(System.in);
+        System.out.println("Введите свое имя");
+        merchantName = sc.nextLine();
+        System.out.println("Введите свою эл.почту");
+        email = sc.nextLine();
+        System.out.println("Введите свой номер");
+        phone = sc.nextLine();
+        System.out.println("Введите имя товара");
+        productName = sc.nextLine();
+        System.out.println("Введите количество товара");
+        quantity = sc.nextInt();
+        System.out.println("Введите стоимость товара");
+        price = sc.nextDouble();
     }
 
     private static String processData() {
